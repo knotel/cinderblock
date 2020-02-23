@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { Box } from 'pcln-design-system'
-
+import theme from '../theme'
 import media from '../media'
 
 export const width = 50
@@ -44,7 +44,7 @@ const Bar = styled(Box)`
   height: 2px;
   display: block;
   position: relative;
-  background: ${({ theme }) => theme.colors.placeholder};
+  background: ${theme.colors.placeholder};
   transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
   transition-delay: 0.2s;
   ${({ menuOpen }) => menuOpen && `

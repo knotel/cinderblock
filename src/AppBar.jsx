@@ -23,8 +23,8 @@ const Wrapper = styled(Flex)`
 
 const Container = styled(Flex)`
   box-sizing: border-box;
-  /* color: ${({ isInverse, theme }) => isInverse ? theme.colors.white : theme.colors.text}; */
-  background: ${({ bgColor, isInverse, isTranslucent, theme }) => isInverse
+  /* color: ${({ isInverse }) => isInverse ? theme.colors.white : theme.colors.text}; */
+  background: ${({ bgColor, isInverse, isTranslucent }) => isInverse
     ? bgColor
     : (isTranslucent ? 'rgba(255,255,255,0.98)' : theme.colors.white)};
   align-items: center;
@@ -33,8 +33,8 @@ const Container = styled(Flex)`
   margin: 0;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid ${({ theme }) => theme.colors.disabledIcon};
-  padding: 0 ${({ theme }) => theme.space[3]}px 0 ${({ theme }) => theme.space[2]}px;
+  border-bottom: 1px solid ${theme.colors.disabledIcon};
+  padding: 0 ${theme.space[3]}px 0 ${theme.space[2]}px;
   z-index: ${props => props.zIndex};
 
   ${({ isSticky }) => isSticky
@@ -47,9 +47,9 @@ const Container = styled(Flex)`
 
   ${media.md`
     height: ${navHeight}px;
-    padding: 0 ${({ theme }) => theme.space[3]}px;
+    padding: 0 ${theme.space[3]}px;
     z-index: 100;
-    box-shadow: ${({ theme }) => theme.boxShadows[1]};
+    box-shadow: ${theme.boxShadows[1]};
   `}
 `
 
@@ -82,7 +82,7 @@ const logoStyle = css`
 
 const StyledKnotelLogo = styled(KnotelLogo)`
   ${logoStyle};
-  color: ${({ isInverse, theme }) => isInverse ? theme.colors.white : theme.colors.text};
+  color: ${({ isInverse }) => isInverse ? theme.colors.white : theme.colors.text};
 `
 const BrokerLogo = styled.img`
   ${logoStyle};
@@ -98,7 +98,7 @@ const BrokerLogo = styled.img`
 const LinksContainer = styled(Flex)`
   display: none;
   align-items: center;
-  ${({ theme }) => theme.mediaQueries.md} {
+  ${theme.mediaQueries.md} {
     display: flex;
   }
 `
@@ -113,19 +113,19 @@ const PoweredByContainer = styled(Flex)`
 const PoweredBy = styled.div`
   font-size: 8px;
   text-transform: uppercase;
-  color: ${({ theme }) => theme.colors.placeholder};
+  color: ${theme.colors.placeholder};
 `
 const SmallKnotelLogo = styled(StyledKnotelLogo)`
   width: 50px;
   height: 10px;
-  color: ${({ theme }) => theme.colors.placeholder};
+  color: ${theme.colors.placeholder};
 `
 
 const LinksWrapper = styled(Flex)`
   display: none;
 
   ${theme.mediaQueries.md} {
-    margin: ${({ theme }) => theme.space[2]}px 0;
+    margin: ${theme.space[2]}px 0;
     display: flex;
     align-items: start;
     flex-direction: column;
@@ -134,7 +134,7 @@ const LinksWrapper = styled(Flex)`
 
 const MobileOnly = styled(Flex)`
   display: flex;
-  ${({ theme }) => theme.mediaQueries.md} {
+  ${theme.mediaQueries.md} {
     display: none;
   }
 `
@@ -146,21 +146,21 @@ const LinkWrapper = styled(Flex)`
   padding: 20px;
 
   color: ${theme.colors.navItemGrey};
-  font-family: ${({ theme }) => theme.font};
-  font-size: ${({ theme }) => theme.fontSizes[2]}px;
-  font-weight: ${({ theme }) => theme.fontWeights.semiBold};
+  font-family: ${theme.font};
+  font-size: ${theme.fontSizes[2]}px;
+  font-weight: ${theme.fontWeights.semiBold};
   font-style: normal;
-  font-size: ${({ theme }) => theme.fontSizes[2]}px;
+  font-size: ${theme.fontSizes[2]}px;
   line-height: 20px;
 `
 
 const StyledNavLink = styled.a`
   color: ${theme.colors.navItemGrey};
-  font-family: ${({ theme }) => theme.font};
-  font-size: ${({ theme }) => theme.fontSizes[2]}px;
-  font-weight: ${({ theme }) => theme.fontWeights.semiBold};
+  font-family: ${theme.font};
+  font-size: ${theme.fontSizes[2]}px;
+  font-weight: ${theme.fontWeights.semiBold};
   font-style: normal;
-  font-size: ${({ theme }) => theme.fontSizes[2]}px;
+  font-size: ${theme.fontSizes[2]}px;
   line-height: 20px;
   text-decoration: none;
 `
@@ -181,10 +181,10 @@ const MobileMenu = styled(Flex)`
 const MobileNavLink = styled(StyledNavLink)`
   display: flex;
   align-items: center;
-  color: ${({ theme }) => theme.colors.navItemGrey};
-  font-family: ${({ theme }) => theme.font};
-  font-size: ${({ theme }) => theme.fontSizes[2]}px;
-  font-weight: ${({ theme }) => theme.fontWeights.semiBold};
+  color: ${theme.colors.navItemGrey};
+  font-family: ${theme.font};
+  font-size: ${theme.fontSizes[2]}px;
+  font-weight: ${theme.fontWeights.semiBold};
   font-style: normal;
   line-height: 18px;
   text-decoration: none;
@@ -291,6 +291,7 @@ AppBar.defaultProps = {
   isInverse: false,
   isSticky: false,
   isTranslucent: false,
+  links: []
 }
 
 AppBar.propTypes = {
@@ -298,6 +299,7 @@ AppBar.propTypes = {
   isInverse: PropTypes.bool,
   isSticky: PropTypes.bool,
   isTranslucent: PropTypes.bool,
+  links: PropTypes.arrayOf(PropTypes.object)
 }
 
 export default AppBar

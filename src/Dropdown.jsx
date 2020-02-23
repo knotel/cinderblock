@@ -2,7 +2,7 @@ import React, { useState, useCallback, useRef, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
 import { Flex, Text } from 'pcln-design-system'
-
+import theme from './theme'
 import media from './media'
 
 const OFFSET_FROM_CONTAINER = 16
@@ -19,14 +19,14 @@ export const DropdownWrapper = styled(Flex)`
 export const DropdownList = styled(Flex)`
   display: ${({ isShow }) => isShow ? 'flex' : 'none'};
   position: fixed;
-  margin: ${({ theme }) => theme.space[3]}px;
+  margin: ${theme.space[3]}px;
   bottom: ${({ offsetY }) => offsetY}px;
   flex-direction: column;
-  background: ${({ theme }) => theme.colors.white};
-  box-shadow: ${({ theme }) => theme.boxShadows[1]};
+  background: ${theme.colors.white};
+  box-shadow: ${theme.boxShadows[1]};
   outline: none;
 
-  ${({ theme }) => theme.mediaQueries.md} {
+  ${theme.mediaQueries.md} {
     bottom: auto;
     top: ${({ offsetY }) => offsetY}px;
     ${({ isOffsetX }) => isOffsetX
@@ -44,26 +44,26 @@ export const DropdownList = styled(Flex)`
 export const StyledLink = styled.a`
   display: inline-flex;
   min-width: 200px;
-  font-family: ${({ theme }) => theme.font};
+  font-family: ${theme.font};
   font-style: normal;
-  font-size: ${({ theme }) => theme.fontSizes[3]}px;
+  font-size: ${theme.fontSizes[3]}px;
   line-height: 18px;
-  background: ${({ theme }) => theme.colors.white};
-  padding: ${({ theme }) => theme.space[3]}px;
+  background: ${theme.colors.white};
+  padding: ${theme.space[3]}px;
   text-decoration: none;
-  color: ${({ theme }) => theme.colors.text};
+  color: ${theme.colors.text};
   white-space: nowrap;
 `
 
 const StyledTitle = styled(Text)`
-  font-family: ${({ theme }) => theme.font};
+  font-family: ${theme.font};
   font-style: normal;
-  font-weight: ${({ theme }) => theme.fontWeights.semiBold};
-  font-size: ${({ theme }) => theme.fontSizes[1]}px;
+  font-weight: ${theme.fontWeights.semiBold};
+  font-size: ${theme.fontSizes[1]}px;
   line-height: 18px;
   text-transform: uppercase;
-  color: ${({ theme }) => theme.colors.placeholder};
-  padding: ${({ theme }) => `${theme.space[3]}px ${theme.space[3]}px ${theme.space[2]}px ${theme.space[3]}px`};
+  color: ${theme.colors.placeholder};
+  padding: ${`${theme.space[3]}px ${theme.space[3]}px ${theme.space[2]}px ${theme.space[3]}px`};
 `
 
 const Dropdown = ({ children, options, title }) => {
