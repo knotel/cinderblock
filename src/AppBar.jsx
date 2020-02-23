@@ -211,7 +211,7 @@ export const AppBar = ({ color, isInverse, isSticky, isTranslucent, logoSrc, lin
         zIndex={51}
       >
         <LogoContainer>
-          <Link href={`/${query}`} as={`${prefix}/`} passHref>
+          <Link href={`/`} as={`/`} passHref>
             <LogoLink>
               {logoSrc ? (
                 <>
