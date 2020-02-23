@@ -197,7 +197,7 @@ const StyledMenuToggleIcon = styled(MenuToggleIcon)`
   position: relative;
 `
 
-export const AppBar = ({ color, isInverse, isSticky, isTranslucent, logoSrc, links }) => {
+export const AppBar = ({ color, isInverse, isSticky, isTranslucent, logoSrc, links, asPath }) => {
   const [showMenu, toggleMenu] = useState(false)
   const handleToggleMenu = useCallback((toggle) => () => toggleMenu(toggle), [toggleMenu])
 
@@ -291,7 +291,8 @@ AppBar.defaultProps = {
   isInverse: false,
   isSticky: false,
   isTranslucent: false,
-  links: []
+  links: [],
+  asPath: '/',
 }
 
 AppBar.propTypes = {
@@ -299,7 +300,8 @@ AppBar.propTypes = {
   isInverse: PropTypes.bool,
   isSticky: PropTypes.bool,
   isTranslucent: PropTypes.bool,
-  links: PropTypes.arrayOf(PropTypes.object)
+  links: PropTypes.arrayOf(PropTypes.object),
+  asPath: PropTypes.string,
 }
 
 export default AppBar
