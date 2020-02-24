@@ -142,6 +142,27 @@ const coreColors = {
   warning: legacyColors.gold,
 }
 
+const applicationColors = {
+  spaceStatus: {
+    default: legacyColors.lightBlue,
+    possible: legacyColors.gold,
+    available: legacyColors.blue,
+    immediate: legacyColors.mint,
+    sold: legacyColors.danger,
+  },
+  compass: {
+    default: '#DBDBDB',
+    pin: '#E85063',
+  },
+  doneGreen: '#2BA84A',
+  spaceBlue: '#245EC7',
+  spaceDarkBlue: '#001833',
+  textSecondary: '#455A64',
+  disabledIcon: '#E0E0E0',
+  activeFilterBg: '#F8F8FB',
+  navItemGrey: '#607D8B',
+}
+
 const colors = {
   ...coreColors,
   ...primaryColors,
@@ -150,13 +171,15 @@ const colors = {
   ...typographyColors,
   ...layoutColors,
   ...legacyColors,
+  ...applicationColors,
   coreColors,
   primaryColors,
   midnightColors,
   skyColors,
   typographyColors,
   layoutColors,
-  legacyColors
+  legacyColors,
+  applicationColors,
 }
 
 const buttonSizes = {
