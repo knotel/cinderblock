@@ -242,7 +242,7 @@ export const AppBar = ({ color, isInverse, isSticky, isTranslucent, logoSrc, lin
           </Link>
         </LogoContainer>
         <LinksContainer>
-          {buttons.map(({ label, onClick }) => <StyledButton onClick={onClick}>{ label }</StyledButton>)}
+          {buttons.map(({ label, onClick }, index) => <StyledButton onClick={onClick} key={index}>{ label }</StyledButton>)}
           <Dropdown
             options={(
               <LinksWrapper>
@@ -287,12 +287,12 @@ export const AppBar = ({ color, isInverse, isSticky, isTranslucent, logoSrc, lin
                 </Link>
               )
               )}
-              {buttons.map(({ label, onClick }) => {
+              {buttons.map(({ label, onClick }, index) => {
                 const handleClick = e => {
                   onClick(e)
                   handleToggleMenu(false)
                 }
-                return <MobileNavLink onClick={handleClick}>{ label }</MobileNavLink>
+                return <MobileNavLink key={index} onClick={handleClick}>{ label }</MobileNavLink>
               })}
             </Flex>
           </MobileMenu>
