@@ -6,6 +6,7 @@ import { Flex } from 'pcln-design-system'
 import media from './media'
 import theme from './theme'
 import Dropdown from './Dropdown'
+import Button from './Button'
 import MenuToggleIcon, { width as menuIconWidth } from './icons/MenuToggleIcon'
 import KnotelLogo from './Logo'
 
