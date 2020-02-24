@@ -198,6 +198,19 @@ const StyledMenuToggleIcon = styled(MenuToggleIcon)`
   position: relative;
 `
 
+const StyledButton = styled(Button)`
+  font-size: ${theme.fontSizes[1]}px;
+  background-color: ${theme.colors.spaceBlue};
+  padding: 5px 10px;
+  height: 40px;
+  margin-left: ${theme.space[3]}px;
+
+  &:hover {
+    background-color: ${theme.colors.spaceBlue};
+    opacity: 0.8;
+  }
+`
+
 export const AppBar = ({ color, isInverse, isSticky, isTranslucent, logoSrc, links, asPath, buttons }) => {
   const [showMenu, toggleMenu] = useState(false)
   const handleToggleMenu = useCallback((toggle) => () => toggleMenu(toggle), [toggleMenu])
@@ -229,7 +242,7 @@ export const AppBar = ({ color, isInverse, isSticky, isTranslucent, logoSrc, lin
           </Link>
         </LogoContainer>
         <LinksContainer>
-          {buttons.map(({ label, onClick }) => <Button ml={2} onClick={onClick}>{ label }</Button>)}
+          {buttons.map(({ label, onClick }) => <StyledButton onClick={onClick}>{ label }</StyledButton>)}
           <Dropdown
             options={(
               <LinksWrapper>
