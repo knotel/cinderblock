@@ -197,7 +197,7 @@ const StyledMenuToggleIcon = styled(MenuToggleIcon)`
   position: relative;
 `
 
-export const AppBar = ({ color, isInverse, isSticky, isTranslucent, logoSrc, links, asPath }) => {
+export const AppBar = ({ color, isInverse, isSticky, isTranslucent, logoSrc, links, asPath, buttons }) => {
   const [showMenu, toggleMenu] = useState(false)
   const handleToggleMenu = useCallback((toggle) => () => toggleMenu(toggle), [toggleMenu])
 
@@ -228,6 +228,7 @@ export const AppBar = ({ color, isInverse, isSticky, isTranslucent, logoSrc, lin
           </Link>
         </LogoContainer>
         <LinksContainer>
+          {buttons.map(({ label, onClick }) => <Button ml={2} onClick={onClick}>{ label }</Button>)}
           <Dropdown
             options={(
               <LinksWrapper>
@@ -272,6 +273,13 @@ export const AppBar = ({ color, isInverse, isSticky, isTranslucent, logoSrc, lin
                 </Link>
               )
               )}
+              {buttons.map(({ label, onClick }) => {
+                const handleClick = e => {
+                  onClick(e)
+                  handleToggleMenu(false)
+                }
+                return <MobileNavLink onClick={handleClick}>{ label }</MobileNavLink>
+              })}
             </Flex>
           </MobileMenu>
           <MenuToggleIcon
@@ -292,6 +300,7 @@ AppBar.defaultProps = {
   isSticky: false,
   isTranslucent: false,
   links: [],
+  buttons: [],
   asPath: '/',
 }
 
@@ -301,6 +310,7 @@ AppBar.propTypes = {
   isSticky: PropTypes.bool,
   isTranslucent: PropTypes.bool,
   links: PropTypes.arrayOf(PropTypes.object),
+  buttons: PropTypes.arrayOf(PropTypes.object),
   asPath: PropTypes.string,
 }
 
