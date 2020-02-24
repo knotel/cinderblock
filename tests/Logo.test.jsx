@@ -1,6 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import Logo from '../src/Logo'
+import { Logo } from '../src'
 
 function setup() {
   const props = {

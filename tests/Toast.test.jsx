@@ -1,17 +1,17 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import { Preview } from '../src'
+import { Toast } from '../src'
 
 function setup() {
   const props = {
     className: 'js-logo',
   };
-  const wrapper = shallow(<Preview />)
+  const wrapper = shallow(<Toast />)
   return { wrapper, props }
 }
 
-describe('Preview Test Suite', () => {
+describe('Toast Test Suite', () => {
   it('Renders without crashing', () => {
-    shallow(<Preview />)
+    shallow(<Toast />)
   })
 })

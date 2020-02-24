@@ -1,6 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import AppBar from '../src/AppBar'
+import { AppBar } from '../src'
 
 function setup() {
   const props = {

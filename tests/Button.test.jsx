@@ -1,6 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import Button from '../src/Button'
+import { Button } from '../src'
 
 function setup() {
   const props = {

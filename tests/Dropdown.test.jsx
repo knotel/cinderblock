@@ -1,7 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import Dropdown from '../src/Dropdown'
-import theme from '../src/theme'
+import { Dropdown, theme } from '../src'
 
 function setup() {
   const props = {

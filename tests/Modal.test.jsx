@@ -1,17 +1,17 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import { Preview } from '../src'
+import { Modal } from '../src'
 
 function setup() {
   const props = {
     className: 'js-logo',
   };
-  const wrapper = shallow(<Preview />)
+  const wrapper = shallow(<Modal />)
   return { wrapper, props }
 }
 
-describe('Preview Test Suite', () => {
+describe('Modal Test Suite', () => {
   it('Renders without crashing', () => {
-    shallow(<Preview />)
+    shallow(<Modal />)
   })
 })
