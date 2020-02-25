@@ -6,6 +6,7 @@ import Preview from './Preview'
 import Button from './Button'
 import { Toast, ToastService } from './Toast'
 import InputField from './InputField'
+import useModal from './hooks/useModal'
 
 const bundle = {
   theme,
@@ -16,7 +17,8 @@ const bundle = {
   Button,
   Toast,
   ToastService,
-  InputField
+  InputField,
+  useModal
 }
 
 module.exports = bundle
