@@ -129,6 +129,7 @@ export const ErrorIconContainer = styled(Box)`
   height: 20px;
   right: ${theme.space[2]}px;
   top: calc(50% - ${theme.space[2]}px);
+  position: absolute;
 `
 
 export const Error = styled(Text)`
