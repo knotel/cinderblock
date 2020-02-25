@@ -5,7 +5,6 @@ import Logo from './Logo'
 import Preview from './Preview'
 import Button from './Button'
 import { Toast, ToastService } from './Toast'
-import useModal from './hooks/useModal'
 import InputField from './InputField'
 
 const bundle = {
@@ -17,7 +16,6 @@ const bundle = {
   Button,
   Toast,
   ToastService,
-  useModal,
   InputField
 }
 
