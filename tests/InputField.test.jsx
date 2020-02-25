@@ -1,17 +1,17 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import { Modal } from '../src'
+import { InputField } from '../src'
 
 function setup() {
   const props = {
     className: 'js-logo',
   };
-  const wrapper = shallow(<Modal />)
+  const wrapper = shallow(<InputField />)
   return { wrapper, props }
 }
 
-describe('Modal Test Suite', () => {
+describe('InputField Test Suite', () => {
   it('Renders without crashing', () => {
-    shallow(<Modal />)
+    shallow(<InputField />)
   })
 })

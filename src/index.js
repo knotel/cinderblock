@@ -5,7 +5,8 @@ import Logo from './Logo'
 import Preview from './Preview'
 import Button from './Button'
 import { Toast, ToastService } from './Toast'
-import { Modal, ModalInner, useModal } from './Modal'
+import useModal from './hooks/useModal'
+import InputField from './InputField'
 
 const bundle = {
   theme,
@@ -16,9 +17,8 @@ const bundle = {
   Button,
   Toast,
   ToastService,
-  Modal,
-  ModalInner,
-  useModal
+  useModal,
+  InputField
 }
 
 module.exports = bundle

@@ -1,14 +1,16 @@
-import useIsShown from '../hooks/useIsShown'
-import { disablePageScroll, enablePageScroll } from 'scroll-lock'
+import useIsShown from './useIsShown'
+import { ScrollLock } from 'pcln-modal'
 import { useEffect } from 'react'
+
+const scrollLock = new ScrollLock()
 
 export const useModal = (defaultValue = false) => {
   const { isShown: isOpen, show: open, hide: close } = useIsShown(defaultValue)
   useEffect(() => {
     if (isOpen) {
-      disablePageScroll()
+      scrollLock.on()
     } else {
-      enablePageScroll()
+      scrollLock.off()
     }
   }, [isOpen])
 

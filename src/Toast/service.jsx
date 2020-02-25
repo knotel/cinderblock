@@ -1,6 +1,7 @@
 /* eslint-disable-next-line */
 import React from 'react'
 import DoneIcon from '../icons/Done'
+import ErrorIcon from '../icons/Error'
 import theme from '../theme'
 
 const singleton = Symbol('toast-singleton')
@@ -26,6 +27,7 @@ export class ToastService {
     },
     error: {
       imageUrl: null,
+      Icon: ErrorIcon,
       primaryColor: theme.colors.danger,
       secondaryColor: theme.colors.text,
       duration: 5 * 1000,
