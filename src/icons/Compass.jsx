@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import styled from 'styled-components'
 import theme from '../theme'
-import media from '../../media'
+import media from '../media'
 import Icon from './Icon'
 
 const Svg = styled(Icon)`
