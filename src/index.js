@@ -1,4 +1,5 @@
 import theme from './theme'
+import media from './media'
 import AppBar from './AppBar'
 import Dropdown from './Dropdown'
 import Logo from './Logo'
@@ -11,9 +12,13 @@ import PageHead from './PageHead'
 import Icon from './icons/Icon'
 import icons from './icons'
 import Loader from './Loader'
+import Tag from './Tag'
+import Tooltip from './Tooltip'
+import AutoClosable from './AutoClosable'
 
 const bundle = {
   theme,
+  media,
   AppBar,
   Dropdown,
   Logo,
@@ -26,7 +31,10 @@ const bundle = {
   PageHead,
   Icon,
   icons,
-  Loader
+  Loader,
+  Tag,
+  Tooltip,
+  AutoClosable
 }
 
 module.exports = bundle
