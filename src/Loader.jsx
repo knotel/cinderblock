@@ -1,5 +1,6 @@
 /* eslint-disable */
 import styled, { css, keyframes } from 'styled-components'
+import theme from './theme'
 
 const pulse = keyframes`
   0% {

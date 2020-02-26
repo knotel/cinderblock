@@ -1,6 +1,6 @@
 {
   "name": "cinderblock",
-  "version": "2.0.18",
+  "version": "2.0.19",
   "description": "Knotel branding approved UI components and assets for use alongside of the Priceline Design System.",
   "main": "build/index.js",
   "repository": "git@github.com:knotel/cinderblock.git",
