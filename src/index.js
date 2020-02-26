@@ -10,6 +10,7 @@ import useModal from './hooks/useModal'
 import PageHead from './PageHead'
 import Icon from './icons/Icon'
 import icons from './icons'
+import Loader from './Loader'
 
 const bundle = {
   theme,
@@ -24,7 +25,8 @@ const bundle = {
   useModal,
   PageHead,
   Icon,
-  icons
+  icons,
+  Loader
 }
 
 module.exports = bundle
