@@ -15,6 +15,8 @@ import Loader from './Loader'
 import Tag from './Tag'
 import Tooltip from './Tooltip'
 import AutoClosable from './AutoClosable'
+import CinderblockProvider from './providers/cinderblock'
+import useScreenSize from './hooks/useScreenSizeFromContext'
 
 const bundle = {
   theme,
@@ -34,7 +36,9 @@ const bundle = {
   Loader,
   Tag,
   Tooltip,
-  AutoClosable
+  AutoClosable,
+  CinderblockProvider,
+  useScreenSize
 }
 
 module.exports = bundle
