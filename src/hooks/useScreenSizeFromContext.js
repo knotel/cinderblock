@@ -1,5 +1,6 @@
 import { useContext } from 'react'
 import ScreenSizeContext from '../contexts/screenSize'
+import invariant from 'invariant'
 
 const useScreenSizeFromContext = () => {
   const context = useContext(ScreenSizeContext)
