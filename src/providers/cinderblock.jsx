@@ -1,6 +1,5 @@
 import React, { useMemo } from 'react'
 import ScreenSizeProvider from './screenSize'
-import ElementHeightsProvider from './elementHeights'
 import { ThemeProvider } from 'pcln-design-system'
 import cinderblockTheme from '../theme'
 
@@ -14,9 +13,7 @@ const CinderblockProvider = ({ theme, children }) => {
   return (
     <ThemeProvider theme={memoizedTheme}>
       <ScreenSizeProvider>
-        <ElementHeightsProvider>
-          { children }
-        </ElementHeightsProvider>
+        { children }
       </ScreenSizeProvider>
     </ThemeProvider>
   )
