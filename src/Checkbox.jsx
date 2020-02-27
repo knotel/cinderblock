@@ -3,7 +3,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Box } from 'pcln-design-system'
 import theme from './theme'
-import CheckIcon from './icons'
+import { CheckIcon } from './icons'
 
 const Holder = styled(Box)`
   width: 16px;
