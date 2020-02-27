@@ -5,9 +5,8 @@ import theme from '../theme'
 import Icon from './Icon'
 
 const Svg = styled(Icon)`
-  width: 20px;
-  height: 20px;
-
+  width: ${({ width }) => width || 20}px;
+  height: ${({ height }) => height || 20}px;
   color: ${theme.colors.doneGreen};
 `
 

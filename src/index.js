@@ -17,6 +17,7 @@ import Tooltip from './Tooltip'
 import AutoClosable from './AutoClosable'
 import CinderblockProvider from './providers/cinderblock'
 import useScreenSize from './hooks/useScreenSizeFromContext'
+import Checkbox from './Checkbox'
 
 const bundle = {
   theme,
@@ -38,7 +39,8 @@ const bundle = {
   Tooltip,
   AutoClosable,
   CinderblockProvider,
-  useScreenSize
+  useScreenSize,
+  Checkbox
 }
 
 module.exports = bundle
