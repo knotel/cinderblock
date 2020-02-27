@@ -3,7 +3,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Box } from 'pcln-design-system'
 import theme from './theme'
-import CloseIcon from './icons/Close'
+import CheckIcon from './icons'
 
 const Holder = styled(Box)`
   width: 16px;
@@ -20,7 +20,7 @@ const Holder = styled(Box)`
 const Checkbox = ({ selected, onChange, className }) => (
   <Holder className={className} onClick={onChange}>
     {selected && (
-      <CloseIcon
+      <CheckIcon
         color={theme.colors.text}
         height={16}
         width={16}

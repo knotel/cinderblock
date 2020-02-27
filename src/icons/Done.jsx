@@ -7,7 +7,7 @@ import Icon from './Icon'
 const Svg = styled(Icon)`
   width: ${({ width }) => width || 20}px;
   height: ${({ height }) => height || 20}px;
-  color: ${theme.colors.doneGreen};
+  color: ${({ color }) => color || theme.colors.doneGreen};
 `
 
 export const Done = ({ className }) => (

@@ -1,4 +1,5 @@
 import CloseIcon from './Close'
+import CheckIcon from './Check'
 import CompassIcon from './Compass'
 import DoneIcon from './Done'
 import ErrorIcon from './Error'
@@ -12,6 +13,7 @@ import SpaceIcon from './Space'
 
 const bundle = {
   CloseIcon,
+  CheckIcon,
   CompassIcon,
   DoneIcon,
   ErrorIcon,
