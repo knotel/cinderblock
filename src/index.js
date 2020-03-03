@@ -1,23 +1,24 @@
-import theme from './theme'
-import media from './media'
-import AppBar from './AppBar'
-import Dropdown from './Dropdown'
-import Logo from './Logo'
-import Preview from './Preview'
-import Button from './Button'
-import { Toast, ToastService } from './Toast'
-import InputField from './InputField'
-import useModal from './hooks/useModal'
-import PageHead from './PageHead'
-import Icon from './icons/Icon'
-import icons from './icons'
-import Loader from './Loader'
-import Tag from './Tag'
-import Tooltip from './Tooltip'
-import AutoClosable from './AutoClosable'
-import CinderblockProvider from './providers/cinderblock'
-import useScreenSize from './hooks/useScreenSizeFromContext'
-import Checkbox from './Checkbox'
+import theme from "./theme";
+import media from "./media";
+import AppBar from "./AppBar";
+import Dropdown from "./Dropdown";
+import Logo from "./Logo";
+import Preview from "./Preview";
+import Button from "./Button";
+import { Toast, ToastService } from "./Toast";
+import InputField from "./InputField";
+import useModal from "./hooks/useModal";
+import PageHead from "./PageHead";
+import Icon from "./icons/Icon";
+import icons from "./icons";
+import Loader from "./Loader";
+import Tag from "./Tag";
+import Tooltip from "./Tooltip";
+import AutoClosable from "./AutoClosable";
+import CinderblockProvider from "./providers/cinderblock";
+import useScreenSize from "./hooks/useScreenSizeFromContext";
+import Checkbox from "./Checkbox";
+import Marker from "./Marker";
 
 const bundle = {
   theme,
@@ -40,7 +41,8 @@ const bundle = {
   AutoClosable,
   CinderblockProvider,
   useScreenSize,
-  Checkbox
-}
+  Checkbox,
+  Marker
+};
 
-module.exports = bundle
+module.exports = bundle;
