@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import NextLink from 'next/link'
 import PropTypes from 'prop-types'
 import React, { useCallback, useState } from 'react'
 import styled, { css } from 'styled-components'
@@ -211,9 +211,12 @@ const StyledButton = styled(Button)`
   }
 `
 
-export const AppBar = ({ color, isInverse, isSticky, isTranslucent, logoSrc, links, asPath, buttons }) => {
+const StyledLink = styled.a``
+
+export const AppBar = ({ color, isInverse, isSticky, isTranslucent, logoSrc, links, asPath, buttons, link }) => {
   const [showMenu, toggleMenu] = useState(false)
   const handleToggleMenu = useCallback((toggle) => () => toggleMenu(toggle), [toggleMenu])
+  const Link = link || NextLink
 
   return (
     <Wrapper>
@@ -326,6 +329,7 @@ AppBar.propTypes = {
   links: PropTypes.arrayOf(PropTypes.object),
   buttons: PropTypes.arrayOf(PropTypes.object),
   asPath: PropTypes.string,
+  link: PropTypes.object
 }
 
 export default AppBar
