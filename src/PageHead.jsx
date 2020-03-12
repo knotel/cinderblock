@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import PropTypes from 'prop-types'
 import React from 'react'
 
@@ -32,6 +31,7 @@ const getHeadMetaDataForImage = image => {
 }
 
 export const PageHead = ({
+  Head,
   title,
   description,
   image,
@@ -61,6 +61,7 @@ export const PageHead = ({
 }
 
 PageHead.propTypes = {
+  Head: PropTypes.object.isRequired,
   title: PropTypes.string,
   description: PropTypes.string,
   image: PropTypes.shape({
