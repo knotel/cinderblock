@@ -210,7 +210,20 @@ const StyledButton = styled(Button)`
   }
 `
 
-const StyledLink = styled.a``
+const StyledLink = styled.div`
+  svg {
+    width: 145px;
+    ${media.md`
+      width: 268px;
+    `}
+  }
+`
+
+const DefaultLink = ({ href, children }) => {
+  return <StyledLink onClick={() => window.open(href)}>
+    { children }
+  </StyledLink>
+}
 
 export const AppBar = ({ color, isInverse, isSticky, isTranslucent, logoSrc, links, asPath, buttons, Link }) => {
   const [showMenu, toggleMenu] = useState(false)
@@ -317,10 +330,11 @@ AppBar.defaultProps = {
   links: [],
   buttons: [],
   asPath: '/',
+  Link: DefaultLink,
 }
 
 AppBar.propTypes = {
-  Link: PropTypes.object.isRequired,
+  Link: PropTypes.object,
   color: PropTypes.string,
   isInverse: PropTypes.bool,
   isSticky: PropTypes.bool,
