@@ -7,6 +7,7 @@ import FilterIcon from './Filter'
 import GridIcon from './Grid'
 import ImageIcon from './Image'
 import ListIcon from './List'
+import MenuToggleIcon from './MenuToggleIcon'
 import NoResultsIcon from './NoResults'
 import PdfIcon from './Pdf'
 import SpaceIcon from './Space'
@@ -21,6 +22,7 @@ const bundle = {
   GridIcon,
   ImageIcon,
   ListIcon,
+  MenuToggleIcon,
   NoResultsIcon,
   PdfIcon,
   SpaceIcon,
