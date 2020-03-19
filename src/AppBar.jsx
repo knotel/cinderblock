@@ -244,10 +244,10 @@ export const AppBar = ({ color, isInverse, isSticky, isTranslucent, logoSrc, lin
               {logoSrc ? (
                 <>
                   <BrokerLogo src={logoSrc} showPoweredBy={poweredBy} />
-                  <PoweredByContainer>
+                  { poweredBy && <PoweredByContainer>
                     <PoweredBy>Powered by</PoweredBy>
                     <SmallKnotelLogo isInverse={isInverse} />
-                  </PoweredByContainer>
+                  </PoweredByContainer> }
                 </>
               ) : (
                 <StyledKnotelLogo isInverse={isInverse} />
