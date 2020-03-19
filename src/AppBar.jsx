@@ -88,7 +88,7 @@ const BrokerLogo = styled.img`
   ${logoStyle};
   height: auto;
   max-height: 100%;
-  ${({ showPoweredBy }) => showPoweredBy ? `max-width: calc(100% - ${poweredByWidth}px);` : ''}
+  ${({ poweredBy }) => poweredBy ? `max-width: calc(100% - ${poweredByWidth}px);` : ''}
 
   ${media.md`
     max-width: none;
@@ -225,7 +225,7 @@ const DefaultLink = ({ href, children }) => {
   </StyledLink>
 }
 
-export const AppBar = ({ color, isInverse, isSticky, isTranslucent, logoSrc, links, asPath, buttons, Link }) => {
+export const AppBar = ({ color, isInverse, isSticky, isTranslucent, logoSrc, links, asPath, buttons, Link, poweredBy }) => {
   const [showMenu, toggleMenu] = useState(false)
   const handleToggleMenu = useCallback((toggle) => () => toggleMenu(toggle), [toggleMenu])
 
@@ -243,7 +243,7 @@ export const AppBar = ({ color, isInverse, isSticky, isTranslucent, logoSrc, lin
             <LogoLink>
               {logoSrc ? (
                 <>
-                  <BrokerLogo src={logoSrc} showPoweredBy={true} />
+                  <BrokerLogo src={logoSrc} showPoweredBy={poweredBy} />
                   <PoweredByContainer>
                     <PoweredBy>Powered by</PoweredBy>
                     <SmallKnotelLogo isInverse={isInverse} />
@@ -331,6 +331,7 @@ AppBar.defaultProps = {
   buttons: [],
   asPath: '/',
   Link: DefaultLink,
+  poweredBy: true
 }
 
 AppBar.propTypes = {
@@ -338,6 +339,7 @@ AppBar.propTypes = {
   color: PropTypes.string,
   isInverse: PropTypes.bool,
   isSticky: PropTypes.bool,
+  poweredBy: PropTypes.bool,
   isTranslucent: PropTypes.bool,
   links: PropTypes.arrayOf(PropTypes.object),
   buttons: PropTypes.arrayOf(PropTypes.object),
