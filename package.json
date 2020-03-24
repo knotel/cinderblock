@@ -1,15 +1,11 @@
 {
   "name": "cinderblock",
-  "version": "2.1.5",
+  "version": "2.2.0",
   "description": "Knotel branding approved UI components and assets for use alongside of the Priceline Design System.",
   "main": "build/index.js",
   "repository": "git@github.com:knotel/cinderblock.git",
   "author": "Will Laeri <wlaeri@gmail.com>",
   "license": "MIT",
-  "engines": {
-    "node": "v10.15.1",
-    "yarn": "1.13.0"
-  },
   "scripts": {
     "build": "babel src -d build",
     "prepack": "yarn build",
