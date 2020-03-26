@@ -31,7 +31,7 @@ export const TableHeader = styled.th`
   font-size: ${theme.fontSizes[0]}px};
   font-weight: ${theme.fontWeights.semiBold};
   background-color: ${theme.colors.white};
-  padding: ${theme.spaces[3]}px;
+  padding: ${theme.space[3]}px;
   border-bottom: 1px solid ${theme.colors.layoutStrokeLight};
   ${media.md`
     font-size: ${theme.fontSizes[1]}px;
