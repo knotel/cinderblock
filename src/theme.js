@@ -10,7 +10,7 @@ const addAliases = (arr, aliases) =>
     })
   )
 
-const breakpoints = [32, 40, 48, 64].map(n => n + 'em')
+const breakpoints = [32, 48, 64, 90].map(n => n + 'em')
 
 const mediaQueries = breakpoints.map(createMediaQuery)
 
@@ -25,9 +25,9 @@ const font = '\'Montserrat\',\'Helvetica Neue\',Helvetica,Arial,sans-serif'
 
 const fontSizes = [10, 12, 14, 16, 18, 20, 24, 28, 32, 36, 42, 48]
 
-const medium = 400
-const semiBold = 600
-const bold = 700
+const medium = 300
+const semiBold = 400
+const bold = 500
 // alias
 const regular = medium
 

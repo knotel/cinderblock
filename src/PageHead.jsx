@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import React from 'react'
+import { Helmet } from 'react-helmet'
 
 const getHeadMetaDataForImage = image => {
   const imageUrl = `https://listings.knotel.com/meta.jpg`
@@ -60,8 +61,14 @@ export const PageHead = ({
   )
 }
 
+PageHead.defaultProps = {
+  Head: Helmet,
+  title: 'Knotel',
+  description: 'Flexible workspace to power your people, productivity, and business',
+}
+
 PageHead.propTypes = {
-  Head: PropTypes.object.isRequired,
+  Head: PropTypes.object,
   title: PropTypes.string,
   description: PropTypes.string,
   image: PropTypes.shape({

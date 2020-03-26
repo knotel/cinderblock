@@ -2,6 +2,8 @@ import React, { useMemo } from 'react'
 import ScreenSizeProvider from './screenSize'
 import { ThemeProvider } from 'pcln-design-system'
 import cinderblockTheme from '../theme'
+import { Toast, ToastService } from '../Toast'
+import { Helmet } from 'react-helmet'
 
 const CinderblockProvider = ({ theme, children }) => {
   const memoizedTheme = useMemo(() => {
@@ -13,7 +15,14 @@ const CinderblockProvider = ({ theme, children }) => {
   return (
     <ThemeProvider theme={memoizedTheme}>
       <ScreenSizeProvider>
-        { children }
+        <>
+          <Helmet>
+            <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=fallback" rel="stylesheet" />
+          </Helmet>
+          { children }
+          <Toast ref={ToastService.init} />
+          <div id="tooltip-portal" />
+        </>
       </ScreenSizeProvider>
     </ThemeProvider>
   )

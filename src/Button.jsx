@@ -2,23 +2,18 @@ import styled from 'styled-components'
 import theme from './theme'
 
 const Button = styled.button`
-  background: ${theme.colors.blue};
-  width: 100%;
-  color: white;
+  background: ${theme.colors.skyBlue};
+  color: ${theme.colors.white};
 
-  min-width: 132px;
   border: none;
-  border-radius: 2px;
-  height: 55px;
+  border-radius: ${theme.radius};
 
   cursor: pointer;
   font-family: ${theme.font};
   font-size: ${theme.fontSizes[1]}px;
-  font-weight: 600;
-  letter-spacing: 0.2px;
-  line-height: 19px;
+  font-weight: ${theme.fontWeights.semiBold};
   text-align: center;
-  padding: 5px 10px;
+  padding: ${theme.space[1]}px ${theme.space[2]}px;
   
   &.error {
     background: ${theme.colors.error};
@@ -29,7 +24,6 @@ const Button = styled.button`
   }
 
   &:hover {
-    background-color: ${theme.colors.blue};
     opacity: 0.8;
   }
 `

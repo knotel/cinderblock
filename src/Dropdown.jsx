@@ -5,7 +5,7 @@ import { Flex, Text } from 'pcln-design-system'
 import theme from './theme'
 import media from './media'
 
-const OFFSET_FROM_CONTAINER = 16
+const OFFSET_FROM_CONTAINER = theme.space[3]
 
 export const DropdownWrapper = styled(Flex)`
   width: fit-content;

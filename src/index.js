@@ -19,6 +19,11 @@ import CinderblockProvider from "./providers/cinderblock";
 import useScreenSize from "./hooks/useScreenSizeFromContext";
 import Checkbox from "./Checkbox";
 import Marker from "./Marker";
+import OutlineButton from "./OutlineButton";
+import MobileOnly from "./MobileOnly";
+import DesktopOnly from "./DesktopOnly";
+import tableComponents from "./Table";
+import Helmet from "react-helmet";
 
 const bundle = {
   theme,
@@ -42,7 +47,12 @@ const bundle = {
   CinderblockProvider,
   useScreenSize,
   Checkbox,
-  Marker
+  Marker,
+  DesktopOnly,
+  MobileOnly,
+  OutlineButton,
+  ...tableComponents,
+  Helmet
 };
 
 module.exports = bundle;
