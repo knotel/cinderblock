@@ -1,5 +1,5 @@
 {
-  "name": "cinderblock",
+  "name": "@knotel/cinderblock",
   "version": "2.3.2",
   "description": "Knotel branding approved UI components and assets for use alongside of the Priceline Design System.",
   "main": "build/index.js",
